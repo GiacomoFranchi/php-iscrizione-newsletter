@@ -5,8 +5,8 @@
                 $mail_stat = 'Mail inserita correttamente! Benvenuto';
                 header('Location: ./thankyou.php');
             }else{
-                $_GET['mail'] = $user_mail;
-                $mail_stat = 'La Mail DEVE contenere una "@" e un "." per essere valida';
+                $_GET['mail'] == $user_mail;
+                $mail_stat = 'La Mail DEVE contenere una "@" e un "." per essere valida. "' . $user_mail . '" non è accettabile.';
             }
         } else{
             $mail_stat = 'Hai lasciato il campo vuoto.... Inserisci la tua Mail';
