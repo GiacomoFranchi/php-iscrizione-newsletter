@@ -1,19 +1,14 @@
 <?php 
+
+    include __DIR__ . '/functions.php';
+
+    
     if(isset($_GET['mail'])) {
         $user_mail = $_GET['mail'];
-        if($user_mail !== ""){   
-            if ((str_contains($user_mail, '@')) && (str_contains($user_mail, '.'))) {
-                echo "The mail is ok";
-            }else{
-                echo 'la mail deve contenere una @ e un .';
-            }
-        } else{
-            echo 'campo vuoto';
-        } 
-    }else{
-        echo '';
-    }
-
+        echo $checkMail = checkMail($user_mail);
+        }else{
+            echo 'inserisci mail';
+        }
 ?>
 
 <!DOCTYPE html>
