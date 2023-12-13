@@ -1,3 +1,21 @@
+<?php 
+    if(isset($_GET['mail'])) {
+        $user_mail = $_GET['mail'];
+        if($user_mail !== ""){   
+            if ((str_contains($user_mail, '@')) && (str_contains($user_mail, '.'))) {
+                echo "The mail is ok";
+            }else{
+                echo 'la mail deve contenere una @ e un .';
+            }
+        } else{
+            echo 'campo vuoto';
+        } 
+    }else{
+        echo '';
+    }
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
