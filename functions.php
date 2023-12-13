@@ -3,7 +3,9 @@
         if($user_mail !== ""){   
             if ((str_contains($user_mail, '@')) && (str_contains($user_mail, '.'))) {
                 $mail_stat = 'Mail inserita correttamente! Benvenuto';
+                header('Location: ./thankyou.php');
             }else{
+                $_GET['mail'] = $user_mail;
                 $mail_stat = 'La Mail DEVE contenere una "@" e un "." per essere valida';
             }
         } else{

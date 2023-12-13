@@ -2,11 +2,15 @@
 
     include __DIR__ . '/functions.php';
 
-    
+
+
     if(isset($_GET['mail'])) {
+        session_start();
+        $_SESSION['addMail'] = $_GET['mail'];
         $user_mail = $_GET['mail'];
         $check_mail = checkMail($user_mail);
         $alert_msg = alertMsg($check_mail);
+
         }else{
             $check_mail = "";
             $alert_msg = "";
