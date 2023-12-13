@@ -28,12 +28,12 @@
 </head>
 
 <body>
-    <section>
+    <section class="text-center">
         <h1>Iscrizione Newsletter</h1>
-        <form action="index.php" method="GET">
-            <div>
+        <form action="index.php" method="GET" class="d-flex flex-column justify-content-center">
+            <div class="d-flex flex-column justify-content-center">
                 <label for="mail">Inserisci la tua mail per registrarti</label>
-                <input name="mail" type="text" placeholder="esempio@es.es">
+                <input class="w-25 m-auto my-2" name="mail" type="text" placeholder="esempio@es.es">
             </div>
             <div>
                 <button type="submit">Invia</button>
@@ -41,7 +41,7 @@
         </form>
     </section>
     <section>
-        <h2 class="<?php echo $alert_msg ?>"> <?php echo $check_mail ?> </h2>
+        <h2 class="<?php echo $alert_msg ?> w-75 m-auto my-2 text-center"> <?php echo $check_mail ?> </h2>
     </section>
 </body>
 </html>
