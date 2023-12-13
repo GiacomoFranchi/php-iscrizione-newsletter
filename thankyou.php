@@ -20,7 +20,7 @@
     <div class="text-center">
         <h1 class="text-success">Registrazione avvenuta con successo</h1>
         <h2>Grazie per aver scelto la nostra newsletter</h2>
-        <h3 class="text-info bg-dark">La tua mail: <?php echo $_SESSION['addMail'] ?> è stata registrata!</h3>
+        <h3 class="alert alert-success">La tua mail: <?php echo $_SESSION['addMail'] ?> è stata registrata!</h3>
     </div>
 </body>
 </html>
